@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
+use App\Models\Book;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,16 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
+    //宣告變數
+    $a = 0;
+    $b = [1, 2, 3];
+    $c = '你好';
+    $d = (object)['id' => 1];
+    $books = Book::get();
+
+
+    //中止並印出
+    dd($books);
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
