@@ -60,6 +60,8 @@ Route::get('/', function () {
 //將邏輯放到Controller裡
 Route::get('/test', [TestController::class, 'index'])->middleware(['auth', 'verified']);
 
+Route::get('/teacher', [TestController::class, 'teacher']);
+ 
 
 
 

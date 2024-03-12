@@ -21,4 +21,18 @@ class TestController extends Controller
             'response' => $data,
         ]);
     }
+    public function teacher() {
+        $books = Book::get();
+
+        $data = [
+            'books' => $books,
+            'count' => 1,
+            'title' => '血鑽石',
+        ];
+        
+        return Inertia::render('Teacher', [
+            'response' => $data,
+        ]);
+    }
+
 };

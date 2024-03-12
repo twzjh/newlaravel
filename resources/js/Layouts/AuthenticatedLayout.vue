@@ -30,10 +30,16 @@ const showingNavigationDropdown = ref(false);
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
+                                    儀錶板
                                 </NavLink>
                                 <NavLink href="/test">
-                                    Test
+                                    課程管理
+                                </NavLink>
+                                <NavLink href="/teacher">
+                                    教師管理
+                                </NavLink>
+                                <NavLink href="/test">
+                                    學期排課
                                 </NavLink>
                             </div>
                         </div>

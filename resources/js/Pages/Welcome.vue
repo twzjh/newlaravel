@@ -1,5 +1,6 @@
 <script setup>
 import { Link } from '@inertiajs/vue3';
+import schoolBg from '/images/school.png'
 
 defineProps({
     canLogin: {
@@ -16,6 +17,12 @@ defineProps({
         type: String,
         required: true,
     },
+
+    // data() {
+    //     return{
+    //         schoolBg,
+    //     };
+    // },
 });
 </script>
 
@@ -34,27 +41,59 @@ defineProps({
             >
 
             <template v-else>
-                <Link href="/test"
-                class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
-                去test頁
-                </Link>
-
                 <Link
                     :href="route('login')"
                     class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
-                    >Log in</Link
+                    >登入</Link
                 >
 
                 <Link
                     v-if="canRegister"
                     :href="route('register')"
                     class="ms-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
-                    >Register</Link
+                    >註冊</Link
                 >
             </template>
         </div>
 
-        <div class="max-w-7xl mx-auto p-6 lg:p-8">
+        <div class="flex justify-center items-center flex-col">
+            <img :src="schoolBg" alt="" class="w-[80px] h-[80px]">
+            <div class="text-center mt-5">
+                <div class="mb-4 flex text-center">
+                    <select class="w-[300px] block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline mr-5" id="class">
+                    <option>113學年度上學期</option>
+                    <option>113學年度下學期</option>
+                    </select>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="class">
+                        學期課表
+                    </label>
+                </div>
+
+                <table class="w-[800px] text-center border-collapse border border-slate-400">
+                <thead>
+                    <tr>
+                        <th class="border border-slate-400">序號</th>
+                        <th class="border border-slate-400">課程名稱</th>
+                        <th class="border border-slate-400">授課教師</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-slate-400">1</td>
+                        <td class="border border-slate-400">數學</td>
+                        <td class="border border-slate-400">Kevin</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-slate-400">2</td>
+                        <td class="border border-slate-400">英語</td>
+                        <td class="border border-slate-400">Tony</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- <div class="max-w-7xl mx-auto p-6 lg:p-8">
             <div class="flex justify-center">
                 <svg
                     viewBox="0 0 62 65"
@@ -302,7 +341,7 @@ defineProps({
                     Laravel v{{ laravelVersion }} (PHP v{{ phpVersion }})
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 
