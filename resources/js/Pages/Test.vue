@@ -41,11 +41,11 @@ export default {
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="flex mx-2 my-5">
-                        <button class="w-[50px] bg-green-200">新增</button>  
+                    <div class="flex m-5">
+                        <Link href="/addclass" class="px-5 h-[50px] bg-green-200 rounded-lg flex justify-center items-center">新增</Link>
                     </div>
-                    <div class="flex justify-center">
-                        <table class="w-[900px] text-center border-collapse border border-slate-400">
+                    <div class="flex justify-center mb-5">
+                        <table class="w-11/12 text-center border-collapse border border-slate-400">
                             <thead>
                                 <tr>
                                     <th class="border border-slate-400">序號</th>
@@ -62,8 +62,10 @@ export default {
                                         <img src="https://fakeimg.pl/250x200/">
                                     </td>
                                     <td class="border border-slate-400">
-                                        <button class="bg-yellow-200">編輯</button>
-                                        <button class="bg-red-200">刪除</button>
+                                        <div class="flex justify-center gap-3">
+                                            <Link href="/editclass" class=" bg-green-200 rounded-lg p-2">編輯</Link>
+                                            <Link href="/editclass" class=" bg-red-200 rounded-lg p-2">刪除</Link>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -73,8 +75,10 @@ export default {
                                         <img src="https://fakeimg.pl/250x200/">
                                     </td>
                                     <td class="border border-slate-400">
-                                        <button class="bg-yellow-200">編輯</button>
-                                        <button class="bg-red-200">刪除</button>
+                                        <div class="flex justify-center gap-3">
+                                            <Link href="/editclass" class=" bg-green-200 rounded-lg p-2">編輯</Link>
+                                            <Link href="/editclass" class=" bg-red-200 rounded-lg p-2">刪除</Link>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>

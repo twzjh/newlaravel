@@ -38,7 +38,7 @@ const showingNavigationDropdown = ref(false);
                                 <NavLink href="/teacher">
                                     教師管理
                                 </NavLink>
-                                <NavLink href="/test">
+                                <NavLink href="/classlist">
                                     學期排課
                                 </NavLink>
                             </div>

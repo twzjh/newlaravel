@@ -24,10 +24,10 @@ Route::get('/', function () {
     $b = [1, 2, 3];
     $c = '你好';
     $d = (object)['id' => 1];
-    $books = Book::get();
+    // $books = Book::get();
 
     $data = [
-        'books' => $books,
+        // 'books' => $books,
         'count' => 1,
         'title' => '血鑽石',
     ];
@@ -58,9 +58,17 @@ Route::get('/', function () {
 });
 
 //將邏輯放到Controller裡
-Route::get('/test', [TestController::class, 'index'])->middleware(['auth', 'verified']);
-
+Route::get('/test', [TestController::class, 'index']);
+Route::get('/addclass', [TestController::class, 'addclass']);
+Route::get('/editclass', [TestController::class, 'editclass']);
 Route::get('/teacher', [TestController::class, 'teacher']);
+Route::get('/addteacher', [TestController::class, 'addteacher']);
+Route::get('/editteacher', [TestController::class, 'editteacher']);
+Route::get('/classlist', [TestController::class, 'classlist']);
+Route::get('/addclasslist', [TestController::class, 'addclasslist']);
+Route::get('/editclasslist', [TestController::class, 'editclasslist']);
+
+
  
 
 
