@@ -5,6 +5,7 @@ use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,16 +26,43 @@ Route::get('/', function () {
     $d = (object)['id' => 1];
     $books = Book::get();
 
+    $data = [
+        'books' => $books,
+        'count' => 1,
+        'title' => '血鑽石',
+    ];
+
 
     //中止並印出
-    dd($books);
+    // dd($books);
+
+
+    //跳轉至指定頁面
+    // return Inertia::render('Test', [
+    //     'canLogin' => Route::has('login'),
+    //     'canRegister' => Route::has('register'),
+    //     'laravelVersion' => Application::VERSION,
+    //     'phpVersion' => PHP_VERSION,
+    // ]);
+
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
+
+    return Inertia::render('Test', [
+        'response' => $data,
+    ]);
 });
+
+//將邏輯放到Controller裡
+Route::get('/test', [TestController::class, 'index'])->middleware(['auth', 'verified']);
+
+
+
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
