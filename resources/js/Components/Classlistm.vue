@@ -19,11 +19,28 @@ export default {
                                 <input type="text" id="classintroduce" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline mr-5">
                             </div>
                         </div>
-                        <div class="flex justify-between">
-                            
+                        <div class="flex justify-between items-center mt-5">
+                            <div class="grid grid-cols-2 w-2/5 border border-black text-center ">
+                                <div class="col-span-2 border-b border-black bg-slate-400">全部課程</div>
+                                <div class="bg-slate-400">課程</div>
+                                <div class="bg-slate-400">教師</div> 
+                                <div>數學</div>
+                                <div>Tom</div>
+                            </div>
 
+                            <div class="flex flex-col">
+                                <button>-></button>
+                                <button><-</button>
+                            </div>
+
+                            <div class="grid grid-cols-2 w-2/5 border border-black text-center ">
+                                <div class="col-span-2 border-b border-black bg-slate-400">學期課程</div>
+                                <div class="bg-slate-400">課程</div>
+                                <div class="bg-slate-400">教師</div> 
+                                <div>國文</div>
+                                <div>Ted</div>
+                            </div>
                         </div>
-
 
                     </form>
 
