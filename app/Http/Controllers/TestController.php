@@ -25,9 +25,7 @@ class TestController extends Controller
         $books = Book::get();
 
         $data = [
-            'books' => $books,
-            'count' => 1,
-            'title' => '血鑽石',
+
         ];
         
         return Inertia::render('Teacher', [
@@ -38,9 +36,7 @@ class TestController extends Controller
         $books = Book::get();
 
         $data = [
-            'books' => $books,
-            'count' => 1,
-            'title' => '血鑽石',
+
         ];
         
         return Inertia::render('Classlist', [
